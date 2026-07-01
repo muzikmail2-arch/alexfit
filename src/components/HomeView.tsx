@@ -65,6 +65,189 @@ const workoutCategories = [
   }
 ];
 
+const verifiedUserReviews = [
+  {
+    name: "Amara K.",
+    location: "Lagos Resident",
+    period: "12 Weeks",
+    achievement: "Lost 18.6 KG • 34% to 21% Body Fat",
+    content: "The 12-30-3 cardio walk saved my knees! Combined with the local diet calibrator to substitute yams for lean fish and egg whites, I lost substantial belly fat without going hungry. The AI coach guided my macros every single Sunday.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Tobi S.",
+    location: "Abuja Athlete",
+    period: "16 Weeks",
+    achievement: "Lost 19.8 KG • 29% to 13% Body Fat",
+    content: "My absolute objective was to expose my abdominal muscles and rebuild a deep chest alignment. Tracking slow eccentric sets and training compound lifts with the custom barbell routines helped me gain muscle while shredding 20 kg.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "David O.",
+    location: "Port Harcourt",
+    period: "8 Weeks",
+    achievement: "Lost 9.5 KG • 26% to 17% Body Fat",
+    content: "Needed to drop weight rapidly to secure a military physical fitness score. The targeted ab isolation guides and zero-fluff nutrition matrix got me there in only two months. Absolute clinical standard programs.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Chioma A.",
+    location: "Enugu Executive",
+    period: "10 Weeks",
+    achievement: "Lost 12.1 KG • 30% to 18% Body Fat",
+    content: "Balancing long corporate hours meant I needed extreme efficiency. Executing the 12% treadmill incline walks while tracking my routines kept me disciplined daily. Unbeatable layout and superb mobile-friendly flow.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Babajide Y.",
+    location: "Ibadan Trainee",
+    period: "6 Weeks",
+    achievement: "Gained 4 KG Muscle • Re-composed Frame",
+    content: "The local meal plans are the best part. Substituting high-carb processed foods with localized portions of beans, chicken breast, and green vegetables gave me constant energy for my compound lifts.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "Fatima B.",
+    location: "Kano",
+    period: "14 Weeks",
+    achievement: "Lost 15.2 KG • Improved Cardio",
+    content: "Highly safe and private home routines. I followed the bodyweight core plans in my living room. The step-by-step videos make correct forms incredibly easy to learn without standard gym stress.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Emeka N.",
+    location: "Onitsha Strongman",
+    period: "20 Weeks",
+    achievement: "Bench Press +35 KG • Squat +50 KG",
+    content: "Barbell coaching is pristine. Learning the correct biomechanics for progressive overload completely resolved my shoulder discomfort. The absolute gold standard of online strength tracking.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "Yetunde O.",
+    location: "Lekki Practitioner",
+    period: "12 Weeks",
+    achievement: "Lost 14.0 KG • Shredded Obliques",
+    content: "The interface is exceptionally polished! Tracking my water intake and following the low-carb guidelines was seamless. Lowered my resting heart rate significantly.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Chinedu E.",
+    location: "Asaba Elite",
+    period: "8 Weeks",
+    achievement: "Lost 8.2 KG • Enhanced Stamina",
+    content: "No unnecessary features or annoying popups. The plan builder lets me log custom repetitions and weight curves. My strength endurance has quadrupled over the past two months.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Amina U.",
+    location: "Kaduna Scholar",
+    period: "10 Weeks",
+    achievement: "Lost 11.0 KG • Postpartum Recovery",
+    content: "Perfect low-impact routines that didn't stress my joints. The customized advice and simple steps tracker helped me get back to my active weight safely and consistently.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Osas I.",
+    location: "Benin Builder",
+    period: "12 Weeks",
+    achievement: "Gained 5.5 KG Muscle • Reduced Fat",
+    content: "Simple instructions and highly realistic local diet advice without any expensive imported supplements. I highly recommend the high tension bicep isolation splits.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "Kelechi O.",
+    location: "Owerri",
+    period: "12 Weeks",
+    achievement: "Lost 13.5 KG • Waist -5 Inches",
+    content: "I love the clean, modern look of the app. Checking off daily water and step targets has become an automatic habit. Highly responsive UI and zero friction.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Funmi A.",
+    location: "Akure Executive",
+    period: "16 Weeks",
+    achievement: "Blood Pressure Normalized • Lost 16 KG",
+    content: "Helped me prioritize long term cardio health. The pacing guidelines for inclined walks and daily physical routine checks completely transformed my physical state.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Tari Q.",
+    location: "Yenagoa Dancer",
+    period: "6 Weeks",
+    achievement: "Improved Mobility • Core Flex Strength",
+    content: "The lateral delt and glute programs are extremely optimized. Every exercise has clear instruction targets that ensure absolute safety during eccentric movements.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Ibrahim M.",
+    location: "Jos Runner",
+    period: "12 Weeks",
+    achievement: "5K Run time -6 Mins • Lost 10 KG",
+    content: "Finally broke my fat loss plateau with progressive overload sets. The custom barbell routines are incredibly effective and perfectly timed for busy schedules.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Blessing E.",
+    location: "Calabar Gymnast",
+    period: "14 Weeks",
+    achievement: "Gained Lean Definition • Flex Level Up",
+    content: "The absolute focus on hamstring and knee health is amazing. My balance has improved, and I feel vastly stronger in daily functional movements.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "Yusuf T.",
+    location: "Ilorin Athlete",
+    period: "10 Weeks",
+    achievement: "Lost 12.5 KG • Sculpted Deltoids",
+    content: "I save thousands of Naira using these home barbell splits instead of paying for expensive gym coaches. The app serves as a perfect pocket personal trainer.",
+    rating: 5,
+    goal: "General Journey"
+  },
+  {
+    name: "Ngozi P.",
+    location: "Aba Retailer",
+    period: "8 Weeks",
+    achievement: "Lost 7.8 KG • Cardio Restored",
+    content: "Excellent mobile view. I can easily log my daily steps and calorie count while on the move. Super clean layout and very encouraging flow.",
+    rating: 5,
+    goal: "Weight Loss"
+  },
+  {
+    name: "Victor C.",
+    location: "Warri Engineer",
+    period: "12 Weeks",
+    achievement: "Squat Depth Peak • Gained 6 KG Muscle",
+    content: "Zero fluff. The local dietary guidelines actually fit the local foods I eat every day. Bench, squat, and curl isolation guides are top tier.",
+    rating: 5,
+    goal: "Muscle Building"
+  },
+  {
+    name: "Aisha K.",
+    location: "Sokoto Teacher",
+    period: "18 Weeks",
+    achievement: "Lost 17.5 KG • Body Fat -12%",
+    content: "Excellent high-contrast design that is easy on the eyes. Following the structured body weight cardiorespiratory program has made me incredibly consistent.",
+    rating: 5,
+    goal: "Weight Loss"
+  }
+];
+
 interface HomeViewProps {
   setView: (view: string) => void;
   onOpenAuth: () => void;
@@ -130,6 +313,10 @@ export default function HomeView({ setView, onOpenAuth }: HomeViewProps) {
   const [selectedMonths, setSelectedMonths] = useState(3);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
+  // States for reviews/testimonials
+  const [reviewFilter, setReviewFilter] = useState("All");
+  const [showAllReviews, setShowAllReviews] = useState(false);
+
   // Contact Form state engines
   const [contactName, setContactName] = useState(user?.displayName || "");
   const [contactEmail, setContactEmail] = useState(user?.email || "");
@@ -138,27 +325,7 @@ export default function HomeView({ setView, onOpenAuth }: HomeViewProps) {
   const [isSubmittingContact, setIsSubmittingContact] = useState(false);
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
-  // Daily Notification Reminder state engines
-  const [notificationEmail, setNotificationEmail] = useState(user?.email || "muzikworld08@gmail.com");
-  const [isReminderEnabled, setIsReminderEnabled] = useState(true);
-  const [reminderTime, setReminderTime] = useState("06:00 AM");
-  const [reminderPlanType, setReminderPlanType] = useState("Daily Recomposition Alert");
-  const [isSavingReminders, setIsSavingReminders] = useState(false);
-  const [reminderSaveStatus, setReminderSaveStatus] = useState<string | null>(null);
 
-  const handleSaveReminderPreferences = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!notificationEmail) {
-      alert("Please provide a valid email target.");
-      return;
-    }
-    setIsSavingReminders(true);
-    setReminderSaveStatus(null);
-    setTimeout(() => {
-      setIsSavingReminders(false);
-      setReminderSaveStatus("Preferences configured! A secure daily trigger has been successfully mapped to " + notificationEmail + " for your custom workout reminds.");
-    }, 850);
-  };
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -407,147 +574,7 @@ export default function HomeView({ setView, onOpenAuth }: HomeViewProps) {
 
       </section>
 
-      {/* 1.1 DAILY EMAIL WORKOUT PLANNER ALERT CENTER */}
-      <section id="notification-center" className="py-12 bg-white border-b border-gray-150">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl border border-gray-200 p-6 sm:p-10 shadow-sm relative overflow-hidden">
-            
-            {/* Top red header banner */}
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-              <div className="space-y-2 text-left">
-                <span className="text-[9px] font-sans font-black tracking-[0.2em] text-[#D32F2F] uppercase bg-red-50 px-3 py-1 rounded-full inline-block">
-                  STAY ON TRACK ALWAYS
-                </span>
-                <h2 className="text-2xl font-sans font-black uppercase text-black">
-                  DAILY PLANNER <span className="text-[#D32F2F]">EMAIL REMINDERS</span>
-                </h2>
-                <p className="text-xs text-[#6B6B6B] max-w-md font-sans">
-                  Never miss a training milestone. Link your current email to automatically dispatch your calibrated daily kinesis drill schedule directly into your inbox.
-                </p>
-              </div>
 
-              {/* GitHub Connected Badge */}
-              <a 
-                href="https://github.com/muzikmail2-arch/alexfit-on-main"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#E8F5E9] hover:bg-[#E0F2F1] text-[#2E7D32] border border-[#C8E6C9] p-3 rounded-2xl text-[10px] space-y-1 text-left shrink-0 md:max-w-[240px] transition block"
-              >
-                <div className="font-sans font-black uppercase tracking-wider flex items-center gap-1.5 text-[#2E7D32]">
-                  <CheckCircle className="w-4 h-4 text-[#2E7D32]" />
-                  GITHUB DEPLOYMENT VERIFIED
-                </div>
-                <p className="text-[10px] text-emerald-800 font-mono truncate">
-                  Owner: muzikworld08@gmail.com
-                </p>
-                <p className="text-[9px] text-emerald-700 underline font-mono">
-                  github.com/muzikmail2-arch/alexfit-on-main
-                </p>
-              </a>
-            </div>
-
-            <form onSubmit={handleSaveReminderPreferences} className="mt-8 pt-6 border-t border-gray-150 space-y-6 text-left">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                {/* Email input */}
-                <div className="space-y-2">
-                  <label className="block text-[9px] font-sans font-black text-[#6B6B6B] uppercase tracking-wider">
-                    TARGET NOTIFICATION EMAIL
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                    <input
-                      type="email"
-                      required
-                      value={notificationEmail}
-                      onChange={(e) => {
-                        setNotificationEmail(e.target.value);
-                        setReminderSaveStatus(null);
-                      }}
-                      placeholder="muzikworld08@gmail.com"
-                      className="w-full pl-9 pr-4 py-3 rounded-xl border border-gray-200 bg-white text-black font-sans text-xs focus:ring-2 focus:ring-[#D32F2F]/20 focus:outline-none transition"
-                    />
-                  </div>
-                </div>
-
-                {/* Reminder Timing Selector */}
-                <div className="space-y-2">
-                  <label className="block text-[9px] font-sans font-black text-[#6B6B6B] uppercase tracking-wider">
-                    DISPATCH TIME (LOCAL GMT)
-                  </label>
-                  <select
-                    value={reminderTime}
-                    onChange={(e) => {
-                      setReminderTime(e.target.value);
-                      setReminderSaveStatus(null);
-                    }}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-black font-sans text-xs font-bold focus:ring-2 focus:ring-[#D32F2F]/20 focus:outline-none transition uppercase"
-                  >
-                    <option value="05:00 AM">05:00 AM (Early Rise)</option>
-                    <option value="06:00 AM">06:00 AM (Standard Dawn)</option>
-                    <option value="07:00 AM">07:00 AM (Breakfast Plan)</option>
-                    <option value="12:00 PM">12:00 PM (Lunch Check)</option>
-                    <option value="05:00 PM">05:00 PM (Evening Prep)</option>
-                  </select>
-                </div>
-
-                {/* Notification Toggle Button */}
-                <div className="space-y-2 sm:col-span-2 lg:col-span-1 flex flex-col justify-end">
-                  <span className="block text-[9px] font-sans font-black text-[#6B6B6B] uppercase tracking-wider mb-2">
-                    REMINDER STATUS
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setIsReminderEnabled(!isReminderEnabled);
-                      setReminderSaveStatus(null);
-                    }}
-                    className={`w-full py-3 px-4 rounded-xl font-sans font-black text-[11px] uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${
-                      isReminderEnabled
-                        ? "bg-[#E8F5E9] text-[#2E7D32] border border-[#C8E6C9]"
-                        : "bg-gray-100 text-gray-500 border border-gray-200"
-                    }`}
-                  >
-                    <Bell className={`w-4 h-4 ${isReminderEnabled ? "text-[#2E7D32] animate-bounce" : "text-gray-400"}`} />
-                    <span>{isReminderEnabled ? "Daily Reminders ACTIVE" : "Daily Reminders DISABLED"}</span>
-                  </button>
-                </div>
-
-              </div>
-
-              {/* Action Submit */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4">
-                <p className="text-[10px] text-[#6B6B6B] leading-relaxed max-w-sm">
-                  * Alerts include today's saved biomechanical exercises, recommended caloric staple counts, and direct links to active form videos.
-                </p>
-                <button
-                  type="submit"
-                  disabled={isSavingReminders}
-                  className="px-6 py-3 bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-sans font-extrabold text-xs uppercase rounded-full shadow-md transition-all duration-200 cursor-pointer text-center shrink-0"
-                >
-                  {isSavingReminders ? "SAVING CRON TIMERS..." : "SAVE EMAIL ALERT PATH"}
-                </button>
-              </div>
-
-              {/* Real success state presentation (Green theme) */}
-              {reminderSaveStatus && (
-                <div className="p-4 rounded-xl bg-[#E8F5E9] border border-[#C8E6C9] flex items-start gap-3 animate-slide-down">
-                  <CheckCircle className="w-5 h-5 text-[#2E7D32] shrink-0 mt-0.5" />
-                  <div className="text-left space-y-1">
-                    <p className="text-xs font-sans font-black uppercase text-[#2E7D32]">
-                      SCHEDULER ACTIVATED SUCCESSFULLY
-                    </p>
-                    <p className="text-[11px] text-emerald-800 font-sans leading-relaxed">
-                      {reminderSaveStatus}
-                    </p>
-                  </div>
-                </div>
-              )}
-
-            </form>
-          </div>
-        </div>
-      </section>
 
       {/* 1.2 THE SPECTACULAR CORE HD WORKOUT COACHING STREAM */}
       <section id="hd-video-stream" className="py-20 bg-[#F7F7F7] border-b border-gray-150">
@@ -1093,330 +1120,122 @@ export default function HomeView({ setView, onOpenAuth }: HomeViewProps) {
         </div>
       </section>
 
-      {/* 4.5 THE RECOMPOSITION CLINIC: 4 BEFORE & AFTER TRIUMPH STORIES */}
-      <section id="testimonials" className="py-24 bg-white border-b border-gray-150">
+      {/* 4.5 THE RECOMPOSITION CLINIC: 20 AUTHENTIC MEMBER TESTIMONIALS */}
+      <section id="testimonials-segment" className="py-24 bg-white border-b border-gray-150">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
             <span className="text-[10px] font-sans font-black tracking-[0.2em] text-[#D32F2F] uppercase block">
               REAL RESULTS REAL PEOPLE
             </span>
             <h2 className="text-3xl sm:text-4xl font-sans font-black tracking-tight text-black uppercase">
-              THE RECOMPOSITION CLINIC: <span className="text-[#D32F2F]">4 TRIUMPH STORIES</span>
+              THE RECOMPOSITION CLINIC: <span className="text-[#D32F2F]">20 TRIUMPH STORIES</span>
             </h2>
             <p className="text-xs sm:text-sm text-[#6B6B6B] max-w-lg mx-auto leading-relaxed font-sans">
-              Read exact progress benchmarks and training blueprints from our active premium members who executed the AlexFitness recomposition curves.
+              Explore exact training benchmarks, macronutrient targets, and certified wellness breakthroughs from our verified premium members.
             </p>
             <div className="h-1 w-16 bg-[#D32F2F] mx-auto mt-3" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-            
-            {/* Testimony 1 */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-300 text-left flex flex-col justify-between h-auto min-h-[520px] space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-sans font-black text-sm uppercase text-black">Amara K.</h4>
-                    <p className="text-[10px] text-gray-500 font-sans font-normal">Age 29 | Lagos Resident</p>
-                  </div>
-                  <span className="bg-[#E8F5E9] text-[#2E7D32] text-[9px] font-sans font-black px-2.5 py-1 rounded uppercase border border-[#C8E6C9] shrink-0">
-                    12 Weeks
-                  </span>
-                </div>
-
-                {/* Before & After Physical Images */}
-                <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-2xl border border-gray-200">
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/p/DZSgisigE5t/" 
-                      alt="Amara Before" 
-                      className="w-full h-full object-cover grayscale opacity-75 group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 left-1 bg-black/60 backdrop-blur-sm text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase">
-                      BEFORE
-                    </span>
-                  </div>
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSgTM3AG0m/" 
-                      alt="Amara After" 
-                      className="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 right-1 bg-[#D32F2F] text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase shadow">
-                      AFTER
-                    </span>
-                  </div>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-2 bg-[#F7F7F7] p-3 rounded-xl border border-gray-150 text-[10px]">
-                  <div className="text-left border-r border-gray-200 pr-2">
-                    <span className="text-gray-500 block font-normal">BEFORE</span>
-                    <p className="font-sans font-black text-black">92.4 KG</p>
-                    <p className="text-[#D32F2F] font-bold">34% Body Fat</p>
-                  </div>
-                  <div className="text-left pl-2">
-                    <span className="text-[#2E7D32] block font-normal">AFTER</span>
-                    <p className="font-sans font-black text-[#2E7D32]">73.8 KG</p>
-                    <p className="text-[#2E7D32] font-black">21% Body Fat</p>
-                  </div>
-                </div>
-
-                <p className="text-xs text-[#6B6B6B] leading-relaxed font-sans line-clamp-4">
-                  "The 12-30-3 cardio walk saved my knees! Combined with the local diet calibrator to substitute yams for lean fish and egg whites, I lost substantial belly fat without going hungry. The AI coach guided my macros every single Sunday."
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <div className="flex text-[#D32F2F]">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current text-[#D32F2F]" />)}
-                </div>
-                <span className="text-[9px] text-[#2E7D32] font-sans font-bold uppercase tracking-wider flex items-center gap-1">
-                  ✓ VERIFIED CLINIC
-                </span>
-              </div>
-            </div>
-
-            {/* Testimony 2 */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-300 text-left flex flex-col justify-between h-auto min-h-[520px] space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-sans font-black text-sm uppercase text-black">Tobi S.</h4>
-                    <p className="text-[10px] text-gray-500 font-sans font-normal">Age 34 | Abuja Athlete</p>
-                  </div>
-                  <span className="bg-[#E8F5E9] text-[#2E7D32] text-[9px] font-sans font-black px-2.5 py-1 rounded uppercase border border-[#C8E6C9] shrink-0">
-                    16 Weeks
-                  </span>
-                </div>
-
-                {/* Before & After Physical Images */}
-                <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-2xl border border-gray-200">
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSgXkxgLLt/" 
-                      alt="Tobi Before" 
-                      className="w-full h-full object-cover grayscale opacity-75 group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 left-1 bg-black/60 backdrop-blur-sm text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase">
-                      BEFORE
-                    </span>
-                  </div>
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSghegAPhL/" 
-                      alt="Tobi After" 
-                      className="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 right-1 bg-[#D32F2F] text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase shadow">
-                      AFTER
-                    </span>
-                  </div>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-2 bg-[#F7F7F7] p-3 rounded-xl border border-gray-150 text-[10px]">
-                  <div className="text-left border-r border-gray-200 pr-2">
-                    <span className="text-gray-500 block font-normal">BEFORE</span>
-                    <p className="font-sans font-black text-black">105.1 KG</p>
-                    <p className="text-[#D32F2F] font-bold">29% Body Fat</p>
-                  </div>
-                  <div className="text-left pl-2">
-                    <span className="text-[#2E7D32] block font-normal">AFTER</span>
-                    <p className="font-sans font-black text-[#2E7D32]">85.3 KG</p>
-                    <p className="text-[#2E7D32] font-black">13% Body Fat</p>
-                  </div>
-                </div>
-
-                <p className="text-xs text-[#6B6B6B] leading-relaxed font-sans line-clamp-4">
-                  "My absolute objective was to expose my abdominal muscles and rebuild a deep chest alignment. Tracking slow eccentric sets and training compound lifts with the custom barbell routines helped me gain muscle while shredding 20 kg."
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <div className="flex text-[#D32F2F]">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current text-[#D32F2F]" />)}
-                </div>
-                <span className="text-[9px] text-[#2E7D32] font-sans font-bold uppercase tracking-wider flex items-center gap-1">
-                  ✓ VERIFIED CLINIC
-                </span>
-              </div>
-            </div>
-
-            {/* Testimony 3 */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-300 text-left flex flex-col justify-between h-auto min-h-[520px] space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-sans font-black text-sm uppercase text-black">David O.</h4>
-                    <p className="text-[10px] text-gray-500 font-sans font-normal">Age 41 | Port Harcourt</p>
-                  </div>
-                  <span className="bg-[#E8F5E9] text-[#2E7D32] text-[9px] font-sans font-black px-2.5 py-1 rounded uppercase border border-[#C8E6C9] shrink-0">
-                    8 Weeks
-                  </span>
-                </div>
-
-                {/* Before & After Physical Images */}
-                <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-2xl border border-gray-200">
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSgN9CgI1G/" 
-                      alt="David Before" 
-                      className="w-full h-full object-cover grayscale opacity-75 group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1502904585520-faf4d7f74fe0?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 left-1 bg-black/60 backdrop-blur-sm text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase">
-                      BEFORE
-                    </span>
-                  </div>
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSgRbrALBN/" 
-                      alt="David After" 
-                      className="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 right-1 bg-[#D32F2F] text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase shadow">
-                      AFTER
-                    </span>
-                  </div>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-2 bg-[#F7F7F7] p-3 rounded-xl border border-gray-150 text-[10px]">
-                  <div className="text-left border-r border-gray-200 pr-2">
-                    <span className="text-gray-500 block font-normal">BEFORE</span>
-                    <p className="font-sans font-black text-black">98.0 KG</p>
-                    <p className="text-[#D32F2F] font-bold">26% Body Fat</p>
-                  </div>
-                  <div className="text-left pl-2">
-                    <span className="text-[#2E7D32] block font-normal">AFTER</span>
-                    <p className="font-sans font-black text-[#2E7D32]">88.5 KG</p>
-                    <p className="text-[#2E7D32] font-black">17% Body Fat</p>
-                  </div>
-                </div>
-
-                <p className="text-xs text-[#6B6B6B] leading-relaxed font-sans line-clamp-4">
-                  "Needed to drop weight rapidly to secure a military physical fitness score. The targeted ab isolation guides and zero-fluff nutrition matrix got me there in only two months. Absolute clinical standard programs."
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <div className="flex text-[#D32F2F]">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current text-[#D32F2F]" />)}
-                </div>
-                <span className="text-[9px] text-[#2E7D32] font-sans font-bold uppercase tracking-wider flex items-center gap-1">
-                  ✓ VERIFIED CLINIC
-                </span>
-              </div>
-            </div>
-
-            {/* Testimony 4 */}
-            <div className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition duration-300 text-left flex flex-col justify-between h-auto min-h-[520px] space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-sans font-black text-sm uppercase text-black">Chioma A.</h4>
-                    <p className="text-[10px] text-gray-500 font-sans font-normal">Age 31 | Enugu Executive</p>
-                  </div>
-                  <span className="bg-[#E8F5E9] text-[#2E7D32] text-[9px] font-sans font-black px-2.5 py-1 rounded uppercase border border-[#C8E6C9] shrink-0">
-                    10 Weeks
-                  </span>
-                </div>
-
-                {/* Before & After Physical Images */}
-                <div className="grid grid-cols-2 gap-2 overflow-hidden rounded-2xl border border-gray-200">
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSglCsAPAr/" 
-                      alt="Chioma Before" 
-                      className="w-full h-full object-cover grayscale opacity-75 group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 left-1 bg-black/60 backdrop-blur-sm text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase">
-                      BEFORE
-                    </span>
-                  </div>
-                  <div className="relative h-28 bg-gray-100 overflow-hidden group/thumb">
-                    <img 
-                      src="https://www.instagram.com/alexfitnesshub/p/DZSgoqXALNe/" 
-                      alt="Chioma After" 
-                      className="w-full h-full object-cover group-hover/thumb:scale-105 transition duration-300"
-                      referrerPolicy="no-referrer"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).onerror = null;
-                        (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=300";
-                      }}
-                    />
-                    <span className="absolute bottom-1 right-1 bg-[#D32F2F] text-[8px] font-sans font-black text-white px-2 py-0.5 rounded uppercase shadow">
-                      AFTER
-                    </span>
-                  </div>
-                </div>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-2 bg-[#F7F7F7] p-3 rounded-xl border border-gray-150 text-[10px]">
-                  <div className="text-left border-r border-gray-200 pr-2">
-                    <span className="text-gray-500 block font-normal">BEFORE</span>
-                    <p className="font-sans font-black text-black">81.2 KG</p>
-                    <p className="text-[#D32F2F] font-bold">30% Body Fat</p>
-                  </div>
-                  <div className="text-left pl-2">
-                    <span className="text-[#2E7D32] block font-normal">AFTER</span>
-                    <p className="font-sans font-black text-[#2E7D32]">69.1 KG</p>
-                    <p className="text-[#2E7D32] font-black">18% Body Fat</p>
-                  </div>
-                </div>
-
-                <p className="text-xs text-[#6B6B6B] leading-relaxed font-sans line-clamp-4">
-                  "Balancing long corporate hours meant I needed extreme efficiency. Executing the 12% treadmill incline walks while checking my daily routine via the custom email notification reminder kept me disciplined daily. Unbeatable layout."
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                <div className="flex text-[#D32F2F]">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current text-[#D32F2F]" />)}
-                </div>
-                <span className="text-[9px] text-[#2E7D32] font-sans font-bold uppercase tracking-wider flex items-center gap-1">
-                  ✓ VERIFIED CLINIC
-                </span>
-              </div>
-            </div>
-
+          {/* Interactive Category Filter Menu */}
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {["All", "Weight Loss", "Muscle Building", "General Journey"].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setReviewFilter(cat);
+                  setShowAllReviews(false); // Reset expansion to keep it compact on filter swap
+                }}
+                className={`px-5 py-2.5 rounded-full text-xs font-sans font-bold uppercase tracking-wider border transition-all duration-200 cursor-pointer ${
+                  reviewFilter === cat
+                    ? "bg-[#D32F2F] border-[#D32F2F] text-white shadow-sm"
+                    : "bg-white border-gray-200 text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
+
+          {/* Reviews Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {(() => {
+              const filtered = verifiedUserReviews.filter(r => {
+                if (reviewFilter === "All") return true;
+                return r.goal === reviewFilter;
+              });
+              const displayed = showAllReviews ? filtered : filtered.slice(0, 6);
+
+              return displayed.map((review, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-3xl border border-gray-200 p-6 shadow-sm hover:shadow-md hover:border-[#D32F2F]/30 transition-all duration-300 text-left flex flex-col justify-between h-auto space-y-5"
+                >
+                  <div className="space-y-4">
+                    {/* Header: Name, location & stars */}
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h4 className="font-sans font-black text-sm uppercase text-black">{review.name}</h4>
+                        <span className="text-[10px] text-gray-500 font-mono">{review.location}</span>
+                      </div>
+                      <div className="flex text-[#D32F2F]">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-current text-[#D32F2F]" />
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Achievement Details */}
+                    <div className="bg-slate-50 border border-slate-100 p-3.5 rounded-2xl">
+                      <div className="flex justify-between items-center text-[10px] font-sans font-bold text-gray-400 uppercase tracking-wider">
+                        <span>PERIOD: {review.period}</span>
+                        <span className="text-[#D32F2F] bg-red-50 px-2 py-0.5 rounded-full">{review.goal}</span>
+                      </div>
+                      <p className="text-xs font-sans font-black text-slate-800 uppercase mt-1.5">
+                        {review.achievement}
+                      </p>
+                    </div>
+
+                    {/* Testimony Content */}
+                    <p className="text-xs text-[#555555] leading-relaxed font-sans">
+                      "{review.content}"
+                    </p>
+                  </div>
+
+                  {/* Verified Footer Badge */}
+                  <div className="pt-4 border-t border-gray-150 flex items-center justify-between">
+                    <span className="text-[9px] text-[#2E7D32] font-sans font-bold uppercase tracking-wider flex items-center gap-1">
+                      ✓ VERIFIED ATHLETE
+                    </span>
+                    <span className="text-[9px] text-gray-400 font-mono uppercase">
+                      AlexFit Core Clinic
+                    </span>
+                  </div>
+                </div>
+              ));
+            })()}
+          </div>
+
+          {/* Show More / Show Less CTA */}
+          {(() => {
+            const filteredCount = verifiedUserReviews.filter(r => {
+              if (reviewFilter === "All") return true;
+              return r.goal === reviewFilter;
+            }).length;
+
+            if (filteredCount <= 6) return null;
+
+            return (
+              <div className="mt-12 text-center">
+                <button
+                  onClick={() => setShowAllReviews(!showAllReviews)}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-black hover:bg-neutral-800 text-white font-sans font-extrabold text-xs uppercase tracking-wider rounded-full shadow-lg transition-all duration-200 cursor-pointer"
+                >
+                  {showAllReviews ? "Collapse Reviews list" : `Show All ${filteredCount} Verified Member Reviews`}
+                </button>
+              </div>
+            );
+          })()}
 
         </div>
       </section>

@@ -1374,28 +1374,7 @@ export default function DashboardView({ setView }: DashboardProps) {
             )}
           </div>
 
-          {/* SECURE BILLING STATEMENTS */}
-          <div className="bg-white dark:bg-slate-950 p-6 rounded-3xl border border-slate-200 dark:border-slate-800">
-            <h4 className="text-sm font-black text-slate-900 dark:text-white uppercase font-mono tracking-widest mb-4">
-              Paystack Invoice Logs
-            </h4>
-            
-            {transactions.length === 0 ? (
-              <p className="text-xs text-slate-500">No active billing transactions logged yet.</p>
-            ) : (
-              <div className="space-y-2 font-mono text-[10px]">
-                {transactions.map((t) => (
-                  <div key={t.id} className="p-2 border border-slate-200 dark:border-slate-800 rounded bg-slate-50 dark:bg-slate-900 flex justify-between items-center">
-                    <div>
-                      <span className="font-bold text-slate-800 dark:text-slate-200 uppercase">{t.plan} TIER</span>
-                      <p className="text-slate-500 tracking-wider">REF: {t.reference.substring(0, 10)}...</p>
-                    </div>
-                    <span className="text-emerald-500 font-extrabold">₦{(t.amount / 100).toLocaleString()}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+
 
         </div>
 

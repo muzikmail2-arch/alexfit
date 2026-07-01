@@ -16,7 +16,7 @@ import SuccessView from "./components/SuccessView";
 import SavedExercisesView from "./components/SavedExercisesView";
 import WorkoutVideos from "./components/WorkoutVideos";
 import DailyPlanView from "./components/DailyPlanView";
-import AppReadmeView from "./components/AppReadmeView";
+
 
 
 function FitnessAppContent() {
@@ -176,9 +176,7 @@ function FitnessAppContent() {
             {currentView === "workout-videos" && (
               <WorkoutVideos />
             )}
-            {currentView === "readme" && (
-              <AppReadmeView />
-            )}
+
             {currentView === "admin" && user && user.role === "admin" && (
               <AdminDashboard />
             )}

@@ -114,7 +114,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const setUser = (profileOrFn: UserProfile | null | ((prev: UserProfile | null) => UserProfile | null)) => {
     const applyAdminOverride = (profile: UserProfile | null): UserProfile | null => {
-      if (profile && (profile.email === "alexfitnesshub@gmail.com" || profile.email === "muzikworld08@gmail.com")) {
+      if (profile && profile.email === "alexfitnesshub@gmail.com") {
         return {
           ...profile,
           role: "admin",
