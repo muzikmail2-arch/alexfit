@@ -372,7 +372,7 @@ export default function HomeView({ setView, onOpenAuth }: HomeViewProps) {
     }
 
     const amountInKobo = amountNGN * 100;
-    const publicKey = (import.meta as any).env?.VITE_PAYSTACK_PUBLIC_KEY || "pk_live_4486ac34bd0e1b9532f7e0646164c5c23e0b7f25";
+    const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || "pk_live_4486ac34bd0e1b9532f7e0646164c5c23e0b7f25";
 
     if (!(window as any).PaystackPop) {
       alert("Paystack payment SDK is still loading or could be blocked by an adblocker. Please wait a second and retry, or disable your adblocker.");
