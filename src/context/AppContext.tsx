@@ -268,8 +268,14 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setLoading(true);
     
+    // Safety timeout to prevent hanging on initial load if Firebase Auth is slow or blocked
+    const safetyTimer = setTimeout(() => {
+      setLoading(false);
+    }, 400); // Max 400ms loading state, then let the website open automatically!
+    
     // Primary Firebase Session Management
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+      clearTimeout(safetyTimer);
       if (firebaseUser) {
         try {
           // Attempt profile fetch from Firestore
@@ -374,7 +380,10 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       setLoading(false);
     });
 
-    return () => unsubscribe();
+    return () => {
+      clearTimeout(safetyTimer);
+      unsubscribe();
+    };
   }, []);
 
   const loadUserData = (uid: string) => {

@@ -28,7 +28,7 @@ function FitnessAppContent() {
   React.useEffect(() => {
     if (document.getElementById("tawkto-script")) return;
 
-    const tawkId = (import.meta as any).env?.VITE_TAWKTO_PROPERTY_ID || "670fbc51ddc77395e509cfcb/1ibbiop81"; // Responsive Default Test/Production Property
+    const tawkId = (import.meta as any).env?.VITE_TAWKTO_PROPERTY_ID || "6a235a1ce345fc1c2b7a619d/1jqd1g0ko"; // Responsive Default Test/Production Property
 
     const s1 = document.createElement("script");
     const s0 = document.getElementsByTagName("script")[0];
