@@ -84,10 +84,26 @@ function FitnessAppContent() {
 
   // Protected navigation handler
   const handleSetView = (targetView: string) => {
-    if ((targetView === "dashboard" || targetView === "coach" || targetView === "nutrition" || targetView === "community" || targetView === "success-stories" || targetView === "saved-exercises" || targetView === "workout-generator") && !user) {
+    if ((targetView === "dashboard" || targetView === "coach" || targetView === "nutrition" || targetView === "community" || targetView === "success-stories" || targetView === "saved-exercises" || targetView === "workout-generator" || targetView === "daily-plan" || targetView === "library") && !user) {
       setIsAuthOpen(true);
       return;
     }
+
+    // If the user is on the free trial, block premium features and redirect to pricing section on Home
+    if (user && user.subscriptionStatus !== "premium" && user.role !== "admin") {
+      const premiumViews = ["dashboard", "coach", "nutrition", "workout-generator", "daily-plan", "library"];
+      if (premiumViews.includes(targetView)) {
+        setView("home");
+        setTimeout(() => {
+          const el = document.getElementById("pricing");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }, 150);
+        return;
+      }
+    }
+
     setView(targetView);
   };
 
@@ -147,7 +163,7 @@ function FitnessAppContent() {
               <HomeView setView={handleSetView} onOpenAuth={() => setIsAuthOpen(true)} />
             )}
             {currentView === "library" && (
-              <WorkoutLibrary setView={setView} />
+              <WorkoutLibrary setView={handleSetView} />
             )}
             {currentView === "workout-generator" && user && (
               <WorkoutGeneratorView />

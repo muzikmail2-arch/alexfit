@@ -100,13 +100,13 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm animate-fade-in">
-      <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl transition-all">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white p-4 overflow-y-auto animate-fade-in animate-duration-200">
+      <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white border border-slate-200 shadow-xl transition-all">
         
         {/* Aesthetic design strip */}
         <div className="h-1.5 w-full bg-[#C0392B]" />
         
-        <div className="px-6 py-8">
+        <div className="px-6 py-8 bg-white">
           
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
@@ -156,7 +156,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     placeholder="Alex Mercer"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
+                    className="w-full pl-10 pr-4 py-2 text-sm rounded-lg bg-white border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
                   />
                 </div>
               </div>
@@ -174,7 +174,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   placeholder="name@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
+                  className="w-full pl-10 pr-4 py-2 text-sm rounded-lg bg-white border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
                 />
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-10 py-2 text-sm rounded-lg bg-slate-50 border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
+                    className="w-full pl-10 pr-10 py-2 text-sm rounded-lg bg-white border border-slate-200 text-slate-950 placeholder:text-slate-400 focus:outline-none focus:border-[#C0392B]"
                   />
                   <button
                     type="button"

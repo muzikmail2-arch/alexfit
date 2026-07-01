@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useApp } from "../context/AppContext";
-import { Menu, X, Shield, Lock } from "lucide-react";
+import { Menu, X, Shield, Lock, Award } from "lucide-react";
 
 interface NavbarProps {
   currentView: string;
@@ -51,20 +51,25 @@ export default function Navbar({ currentView, setView, onOpenAuth }: NavbarProps
   };
 
   // Centralized Navigation Menu definitions
-  const menuItems = user ? [
+  const menuItems = user ? (
+    user.subscriptionStatus === "premium" ? [
+      { id: "home", label: "Home", action: () => handleNav("home") },
+      { id: "daily-plan", label: "My Plan", action: () => handleNav("daily-plan") },
+      { id: "library", label: "Workouts", action: () => handleNav("library") },
+      { id: "workout-generator", label: "AI Generator", action: () => handleNav("workout-generator") },
+      { id: "workout-videos", label: "Videos", action: () => handleNav("workout-videos") },
+      { id: "saved-exercises", label: "Saved", action: () => handleNav("saved-exercises") },
+      { id: "nutrition", label: "Nutrition", action: () => handleNav("nutrition") },
+      { id: "community", label: "Community", action: () => handleNav("community") },
+      { id: "coach", label: "AI Coach", action: () => handleNav("coach") },
+    ] : [
+      { id: "home", label: "Home", action: () => handleNav("home") },
+      { id: "workout-videos", label: "Videos", action: () => handleNav("workout-videos") },
+      { id: "saved-exercises", label: "Saved", action: () => handleNav("saved-exercises") },
+      { id: "community", label: "Community", action: () => handleNav("community") },
+    ]
+  ) : [
     { id: "home", label: "Home", action: () => handleNav("home") },
-    { id: "daily-plan", label: "My Plan", action: () => handleNav("daily-plan") },
-    { id: "library", label: "Workouts", action: () => handleNav("library") },
-    { id: "workout-generator", label: "AI Generator", action: () => handleNav("workout-generator") },
-    { id: "workout-videos", label: "Videos", action: () => handleNav("workout-videos") },
-    { id: "saved-exercises", label: "Saved", action: () => handleNav("saved-exercises") },
-    { id: "nutrition", label: "Nutrition", action: () => handleNav("nutrition") },
-    { id: "community", label: "Community", action: () => handleNav("community") },
-    { id: "coach", label: "AI Coach", action: () => handleNav("coach") },
-  ] : [
-    { id: "home", label: "Home", action: () => handleNav("home") },
-    { id: "library", label: "Workouts", action: () => handleNav("library") },
-    { id: "workout-generator", label: "AI Generator", action: () => handleNav("workout-generator") },
     { id: "workout-videos", label: "Videos", action: () => handleNav("workout-videos") },
     { id: "pricing", label: "Pricing", action: () => handleNav("home", "pricing") },
     { id: "testimonials-segment", label: "Reviews", action: () => handleNav("home", "testimonials-segment") },
@@ -240,16 +245,35 @@ export default function Navbar({ currentView, setView, onOpenAuth }: NavbarProps
                 </button>
               </>
             ) : (
-              <button
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setView("dashboard");
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-[#D32F2F] text-white hover:bg-[#B71C1C] active:scale-95 transition-all duration-250 font-sans font-bold text-xs uppercase tracking-wider shadow-md cursor-pointer"
-              >
-                <Lock className="w-4 h-4 text-white" />
-                <span>My Dashboard</span>
-              </button>
+              <div className="flex flex-col gap-2 w-full">
+                {user.subscriptionStatus === "premium" ? (
+                  <button
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setView("dashboard");
+                    }}
+                    className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-[#D32F2F] text-white hover:bg-[#B71C1C] active:scale-95 transition-all duration-250 font-sans font-bold text-xs uppercase tracking-wider shadow-md cursor-pointer"
+                  >
+                    <Lock className="w-4 h-4 text-white" />
+                    <span>My Dashboard</span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setView("home");
+                      setTimeout(() => {
+                        const el = document.getElementById("pricing");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }, 200);
+                    }}
+                    className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-gradient-to-r from-amber-500 to-[#D32F2F] text-white hover:opacity-95 active:scale-95 transition-all duration-250 font-sans font-black text-xs uppercase tracking-wider shadow-md cursor-pointer"
+                  >
+                    <Award className="w-4 h-4 text-white animate-pulse" />
+                    <span>⭐ Upgrade to Premium</span>
+                  </button>
+                )}
+              </div>
             )}
           </div>
         </div>
