@@ -300,7 +300,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
                 subscriptionStatus: "free",
                 subscriptionTier: "none",
                 createdAt: new Date().toISOString(),
-                onboarded: false,
+                onboarded: true,
               };
               await setDoc(userDocRef, profile);
               // Cache in local storage
@@ -533,7 +533,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       subscriptionStatus: "free",
       subscriptionTier: "none",
       createdAt: new Date().toISOString(),
-      onboarded: false,
+      onboarded: true,
     };
     
     if (!isMockFirebase) {
